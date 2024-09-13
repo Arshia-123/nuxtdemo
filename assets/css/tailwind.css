@@ -1,0 +1,10 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+/* Set Font Here (Must Be Same As Imported) */
+* {
+    font-family: "Bricolage Grotesque", sans-serif;
+
+  }
