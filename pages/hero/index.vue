@@ -1,6 +1,6 @@
 <template>
   <!-- Cleaner Dummy Navbar -->
-
+  <Particles class="absolute inset-0 pointer-events-none" />
   <nav
     class="fixed top-0 left-0 w-full flex justify-between items-center backdrop-blur-md bg-transparent border-b border-gray-300 p-4 pl-32 pr-32"
   >
@@ -22,7 +22,12 @@
         href="#"
         class="flex items-center border border-gray-400 text-gray-800 text-sm font-medium px-6 py-1 rounded-full mb-6 hover:bg-gray-100 transition"
       >
-        <RadiantText :duration="10">✨Explore our Products</RadiantText>
+        <NuxtLink to="/">
+          <RadiantText :duration="10"
+            >✨Explore our Products</RadiantText
+          ></NuxtLink
+        >
+
         <svg
           class="ml-2 w-4 h-4"
           xmlns="http://www.w3.org/2000/svg"
@@ -56,10 +61,12 @@
     <!-- Dummy Image -->
 
     <BlurReveal :delay="0.3" :duration="0.6" :y-offset="10" :blur="5">
-      <img
-        src="https://via.placeholder.com/600x300"
-        alt="Dummy Image"
-        class="mt-6 rounded-lg shadow-lg"
+      <NuxtImg
+        src="https://cdn.dribbble.com/users/7083770/screenshots/17287518/media/83259c23110938b3cd4a7bce98f2e690.png?resize=400x300&vertical=center"
+        height="500"
+        width="500"
+        class="h-96 w-full object-cover rounded-xl group-hover/card:shadow-xl mt-10"
+        alt="thumbnail"
       />
     </BlurReveal>
   </div>
@@ -69,4 +76,5 @@
 import { ref } from "vue";
 import BlurReveal from "~/components/inspira-ui/BlurReveal.vue";
 import RadiantText from "~/components/inspira-ui/RadiantText.vue";
+import Particles from "~/components/inspira-ui/Particles.vue";
 </script>
